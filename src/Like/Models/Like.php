@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Cog\Contracts\Love\Likeable\Models\Likeable likeable
  * @property int type_id
  * @property int user_id
+ * @property string comment
  * @package Cog\Laravel\Love\Like\Models
  */
 class Like extends Model implements LikeContract
@@ -40,6 +41,7 @@ class Like extends Model implements LikeContract
      */
     protected $fillable = [
         'user_id',
+        'comment',
         'type_id',
     ];
 

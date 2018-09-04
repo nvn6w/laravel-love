@@ -30,6 +30,7 @@ class CreateLoveLikesTable extends Migration
         Schema::create('love_likes', function (Blueprint $table) {
             $table->increments('id');
             $table->morphs('likeable');
+            $table->string('comment', 255);
             $table->integer('user_id')->unsigned()->index();
             $table->enum('type_id', [
                 'LIKE',
